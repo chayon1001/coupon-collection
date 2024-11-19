@@ -1,0 +1,152 @@
+[
+    {
+      "_id": "1a2b3c4d5e",
+      "brand_name": "Tech World",
+      "rating": 4.5,
+      "description": "The ultimate hub for the latest tech gadgets and accessories.",
+      "brand_logo": "https://example.com/logos/tech-world.png",
+      "coupons": [
+        {
+          "coupon_code": "TECH10",
+          "description": "Get 10% off on all electronics.",
+          "expiry_date": "2024-12-31",
+          "condition": "Minimum purchase of $100 required.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "FREESHIP",
+          "description": "Free shipping on orders over $50.",
+          "expiry_date": "2024-11-30",
+          "condition": "Valid on standard shipping only.",
+          "coupon_type": "Shipping"
+        }
+      ],
+      "shop_Link": "https://techworld.com",
+      "category": "Electronics",
+      "isSaleOn": true
+    },
+    {
+      "_id": "6f7g8h9i0j",
+      "brand_name": "Fashion Fiesta",
+      "rating": 4.2,
+      "description": "Trendy and stylish outfits for every occasion.",
+      "brand_logo": "https://example.com/logos/fashion-fiesta.png",
+      "coupons": [
+        {
+          "coupon_code": "STYLE15",
+          "description": "15% off on all clothing items.",
+          "expiry_date": "2024-12-15",
+          "condition": "Applicable on new arrivals only.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "WINTER20",
+          "description": "20% off on winter collection.",
+          "expiry_date": "2024-12-31",
+          "condition": "No minimum purchase required.",
+          "coupon_type": "Seasonal"
+        }
+      ],
+      "shop_Link": "https://fashionfiesta.com",
+      "category": "Clothing",
+      "isSaleOn": true
+    },
+    {
+      "_id": "1k2l3m4n5o",
+      "brand_name": "Home Comforts",
+      "rating": 4.8,
+      "description": "Quality home essentials and decor items.",
+      "brand_logo": "https://example.com/logos/home-comforts.png",
+      "coupons": [
+        {
+          "coupon_code": "COMFORT25",
+          "description": "Save 25% on select furniture.",
+          "expiry_date": "2024-12-10",
+          "condition": "Available on in-stock items only.",
+          "coupon_type": "Discount"
+        }
+      ],
+      "shop_Link": "https://homecomforts.com",
+      "category": "Home & Living",
+      "isSaleOn": false
+    },
+    {
+      "_id": "9p0q1r2s3t",
+      "brand_name": "Healthy Harvest",
+      "rating": 4.7,
+      "description": "Fresh organic produce and grocery items.",
+      "brand_logo": "https://example.com/logos/healthy-harvest.png",
+      "coupons": [
+        {
+          "coupon_code": "FRESH20",
+          "description": "20% off on all organic produce.",
+          "expiry_date": "2024-11-25",
+          "condition": "Valid on orders over $30.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "ORGANIC5",
+          "description": "$5 off on your first order.",
+          "expiry_date": "2024-12-31",
+          "condition": "For new customers only.",
+          "coupon_type": "Welcome"
+        }
+      ],
+      "shop_Link": "https://healthyharvest.com",
+      "category": "Grocery",
+      "isSaleOn": true
+    },
+    {
+      "_id": "4u5v6w7x8y",
+      "brand_name": "Gamer's Den",
+      "rating": 4.9,
+      "description": "Everything a gamer needs, from consoles to accessories.",
+      "brand_logo": "https://example.com/logos/gamers-den.png",
+      "coupons": [
+        {
+          "coupon_code": "GAMEON10",
+          "description": "10% off on gaming accessories.",
+          "expiry_date": "2024-12-01",
+          "condition": "Valid on orders over $50.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "BUNDLE20",
+          "description": "20% off on gaming bundles.",
+          "expiry_date": "2024-11-30",
+          "condition": "Not combinable with other offers.",
+          "coupon_type": "Bundle"
+        }
+      ],
+      "shop_Link": "https://gamersden.com",
+      "category": "Gaming",
+      "isSaleOn": false
+    },
+    {
+      "_id": "2z3a4b5c6d",
+      "brand_name": "Fit & Fab",
+      "rating": 4.6,
+      "description": "Top fitness equipment and apparel.",
+      "brand_logo": "https://example.com/logos/fit-fab.png",
+      "coupons": [
+        {
+          "coupon_code": "FITNESS15",
+          "description": "15% off on all fitness gear.",
+          "expiry_date": "2024-12-20",
+          "condition": "Applicable on online purchases only.",
+          "coupon_type": "Discount"
+        },
+        {
+          "coupon_code": "NEWYEAR30",
+          "description": "30% off on new year fitness plans.",
+          "expiry_date": "2024-12-31",
+          "condition": "No returns or exchanges.",
+          "coupon_type": "Seasonal"
+        }
+      ],
+      "shop_Link": "https://fitandfab.com",
+      "category": "Fitness",
+      "isSaleOn": true
+    }
+  ]
+  

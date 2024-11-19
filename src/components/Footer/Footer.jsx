@@ -26,7 +26,7 @@ const Footer = () => {
                         <li><a href="#" className="hover:text-teal-500">Duis aute irure dolor?</a></li>
                         <li><a href="#" className="hover:text-teal-500">Sunt in culpa qui officia?</a></li>
                         <li><a href="#" className="hover:text-teal-500">Cillum dolore eu fugiat?</a></li>
-                        <li><a href="#" className="hover:text-teal-500">Lorem Ipsum dolor sit?</a></li>
+
                         <li><a href="#" className="hover:text-teal-500">Dolor Sit Amet?</a></li>
                         <li><a href="#" className="hover:text-teal-500">Set Do Eiusmod?</a></li>
                         <li><a href="#" className="hover:text-teal-500">Excepteur sint occaecat?</a></li>
@@ -71,6 +71,10 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+
+            <aside className="text-center mt-10">
+                <p>Copyright © {new Date().getFullYear()} - All right reserved Coupon ER. Ltd</p>
+            </aside>
 
         </footer>
     );

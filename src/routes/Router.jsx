@@ -16,7 +16,8 @@ export const router = createBrowserRouter([
       children:[
         {
             path:"/",
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: ()=> fetch('./fake_data.json')
         },
         {
             path:'/brand/:id',
@@ -25,7 +26,8 @@ export const router = createBrowserRouter([
 
         {
             path: "/brands",
-            element:<Brands></Brands>
+            element:<Brands></Brands>,
+            loader: ()=> fetch('./fake_data.json')
         },
         {
             path: "/my-profile",

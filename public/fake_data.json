@@ -2,7 +2,7 @@
     {
       "_id": "1a2b3c4d5e",
       "brand_name": "Tech World",
-      "rating": 4.5,
+      "rating": 3.5,
       "description": "The ultimate hub for the latest tech gadgets and accessories.",
       "brand_logo": "https://i.ibb.co.com/HT02dVv/tree-pen-and-cross-logo-design-template-bible-learning-and-teaching-class-free-vector.jpg",
       "coupons": [
@@ -28,7 +28,7 @@
     {
       "_id": "6f7g8h9i0j",
       "brand_name": "Fashion Fiesta",
-      "rating": 4.2,
+      "rating": 2.2,
       "description": "Trendy and stylish outfits for every occasion.",
       "brand_logo": "https://i.ibb.co.com/bdjt5RJ/attachment-31634316.jpg",
       "coupons": [
@@ -54,7 +54,7 @@
     {
       "_id": "1k2l3m4n5o",
       "brand_name": "Home Comforts",
-      "rating": 4.8,
+      "rating": 3.8,
       "description": "Quality home essentials and decor items.",
       "brand_logo": "https://i.ibb.co.com/1Yg1VWj/logo-design-home-repair-construction-260nw-2312190961.jpg",
       "coupons": [
@@ -99,7 +99,7 @@
     {
       "_id": "4u5v6w7x8y",
       "brand_name": "Gamer's Den",
-      "rating": 4.9,
+      "rating": 5,
       "description": "Everything a gamer needs, from consoles to accessories.",
       "brand_logo": "https://i.ibb.co.com/C9gYbyj/gamers-den-salarjung-colony-hyderabad-entertainment-centres-r01b3mijj6.jpg",
       "coupons": [

@@ -7,6 +7,8 @@ import BrandOnSale from "../components/BrandOnSale/BrandOnSale";
 import DailyOffers from "../components/DailyOffers/DailyOffers";
 import MyProfile from "../pages/MyProfile/MyProfile";
 import BlogLatest from "../components/BlogLatest/BlogLatest";
+import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
 
 
 export const router = createBrowserRouter([
@@ -18,6 +20,14 @@ export const router = createBrowserRouter([
             path:"/",
             element: <Home></Home>,
             loader: ()=> fetch('./fake_data.json')
+        },
+        {
+            path:"/auth/login",
+            element: <Login></Login>
+        },
+        {
+            path: "/auth/register",
+            element: <Register></Register>
         },
         {
             path:'/brand/:id',

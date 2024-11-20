@@ -22,9 +22,10 @@ const Brands = () => {
     const handleViewCoupons = (brandId) => {
         if (isLoggedIn) {
             navigate(`/brand-details/${brandId}`);
-        } else {
-            navigate("/login");
-        }
+        } 
+        // else {
+        //     navigate("/login");
+        // }
     };
 
     return (

@@ -1,10 +1,13 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { FaDailymotion, FaHome, FaTags, FaUser } from "react-icons/fa";
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext)
     return (
-        <div className="navbar bg-base-100 container mx-auto">
+        <div className="navbar bg-base-100 w-11/12 mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,77 +27,81 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                         <li>
-                        <NavLink
-                            to="/"
-                            className={({ isActive }) =>
-                                isActive ? "text-emerald-600" : "text-slate-900"
-                            }
-                        >
-                            <div className="flex  gap-1 items-center">
-                                
-                                <span className="text-sm">Home</span>
-                            </div>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/brands"
-                            className={({ isActive }) =>
-                                isActive ? "text-emerald-600" : "text-slate-900"
-                            }
-                        >
-                            <div className="flex gap-1 items-center">
-                             
-                                <span className="text-sm">Brands</span>
-                            </div>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/my-profile"
-                            className={({ isActive }) =>
-                                isActive ? "text-emerald-600" : "text-slate-900"
-                            }
-                        >
-                            <div className="flex gap-1 items-center">
-                             
-                                <span className="text-sm">My Profile</span>
-                            </div>
-                        </NavLink>
-                    </li>
+                        <li>
+                            <NavLink
+                                to="/"
+                                className={({ isActive }) =>
+                                    isActive ? "text-emerald-600" : "text-slate-900"
+                                }
+                            >
+                                <div className="flex  gap-1 items-center">
 
-                    <li>
-                        <NavLink
-                            to="/dailyOffers"
-                            className={({ isActive }) =>
-                                isActive ? "text-emerald-600" : "text-slate-900"
-                            }
-                        >
-                            <div className="flex gap-1 items-center">
-                            
-                                <span className="text-sm">Daily Offers</span>
-                            </div>
-                        </NavLink>
-                    </li>
+                                    <span className="text-sm">Home</span>
+                                </div>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/brands"
+                                className={({ isActive }) =>
+                                    isActive ? "text-emerald-600" : "text-slate-900"
+                                }
+                            >
+                                <div className="flex gap-1 items-center">
 
-                    <li>
-                        <NavLink
-                            to="/blog"
-                            className={({ isActive }) =>
-                                isActive ? "text-emerald-600" : "text-slate-900"
-                            }
-                        >
-                            <div className="flex gap-1 items-center">
-                            
-                                <span className="text-sm">BLog</span>
-                            </div>
-                        </NavLink>
-                    </li>
+                                    <span className="text-sm">Brands</span>
+                                </div>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/my-profile"
+                                className={({ isActive }) =>
+                                    isActive ? "text-emerald-600" : "text-slate-900"
+                                }
+                            >
+                                <div className="flex gap-1 items-center">
+
+                                    <span className="text-sm">My Profile</span>
+                                </div>
+                            </NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink
+                                to="/dailyOffers"
+                                className={({ isActive }) =>
+                                    isActive ? "text-emerald-600" : "text-slate-900"
+                                }
+                            >
+                                <div className="flex gap-1 items-center">
+
+                                    <span className="text-sm">Daily Offers</span>
+                                </div>
+                            </NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink
+                                to="/blog"
+                                className={({ isActive }) =>
+                                    isActive ? "text-emerald-600" : "text-slate-900"
+                                }
+                            >
+                                <div className="flex gap-1 items-center">
+
+                                    <span className="text-sm">BLog</span>
+                                </div>
+                            </NavLink>
+                        </li>
 
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">COUPON <span className='bg-emerald-900 text-white rounded-r-full p-1 px-2'>ER.</span></a>
+            </div>
+                {user && user.email}
+            <div>
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className=" space-x-4 menu-horizontal px-1">
@@ -106,7 +113,7 @@ const Navbar = () => {
                             }
                         >
                             <div className="flex  gap-1 items-center">
-                                
+
                                 <span className="text-sm">Home</span>
                             </div>
                         </NavLink>
@@ -119,7 +126,7 @@ const Navbar = () => {
                             }
                         >
                             <div className="flex gap-1 items-center">
-                             
+
                                 <span className="text-sm">Brands</span>
                             </div>
                         </NavLink>
@@ -132,7 +139,7 @@ const Navbar = () => {
                             }
                         >
                             <div className="flex gap-1 items-center">
-                             
+
                                 <span className="text-sm">My Profile</span>
                             </div>
                         </NavLink>
@@ -146,7 +153,7 @@ const Navbar = () => {
                             }
                         >
                             <div className="flex gap-1 items-center">
-                            
+
                                 <span className="text-sm">Daily Offers</span>
                             </div>
                         </NavLink>
@@ -160,7 +167,7 @@ const Navbar = () => {
                             }
                         >
                             <div className="flex gap-1 items-center">
-                            
+
                                 <span className="text-sm">BLog</span>
                             </div>
                         </NavLink>
@@ -171,7 +178,10 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Login</a>
+                {
+                    user && user?.email ? <button onClick={logOut} className="px-4 py-2 bf bg-emerald-900 rounded-lg text-white">Log-Out</button> : <Link to='/auth/login' className="px-4 py-2 bf bg-emerald-900 rounded-lg text-white" >Login
+                </Link>
+              }
             </div>
         </div>
     );

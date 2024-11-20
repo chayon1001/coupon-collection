@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaHome, FaTags, FaUser } from "react-icons/fa";
+import { FaDailymotion, FaHome, FaTags, FaUser } from "react-icons/fa";
 
 const Navbar = () => {
     return (
@@ -25,30 +25,44 @@ const Navbar = () => {
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         <li>
-                            <NavLink
-                                to="/"
-                                className={({ isActive }) => (isActive ? "text-emerald-800 font-semibold " : "")}
-                            >
-                                Home
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                to="/brands"
-                                className={({ isActive }) => (isActive ? "text-emerald-800 font-semibold  " : "")}
-                            >
-                                Brands
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink
-                                to="/my-profile"
-                                className={({ isActive }) => (isActive ? "text-emerald-800 font-semibold " : "")}
-                            >
-                                My Profile
-                            </NavLink>
-                        </li>
-
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) =>
+                                isActive ? "text-emerald-600" : "text-slate-900"
+                            }
+                        >
+                            <div className="flex  gap-1 items-center">
+                                <FaHome size={18} />
+                                <span className="text-sm">Home</span>
+                            </div>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/brands"
+                            className={({ isActive }) =>
+                                isActive ? "text-emerald-600" : "text-slate-900"
+                            }
+                        >
+                            <div className="flex gap-1 items-center">
+                                <FaTags size={18} />
+                                <span className="text-sm">Brands</span>
+                            </div>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/my-profile"
+                            className={({ isActive }) =>
+                                isActive ? "text-emerald-600" : "text-slate-900"
+                            }
+                        >
+                            <div className="flex gap-1 items-center">
+                                <FaUser size={18} />
+                                <span className="text-sm">My Profile</span>
+                            </div>
+                        </NavLink>
+                    </li>
 
                     </ul>
                 </div>
@@ -64,7 +78,7 @@ const Navbar = () => {
                             }
                         >
                             <div className="flex  gap-1 items-center">
-                                <FaHome size={24} />
+                                <FaHome size={18} />
                                 <span className="text-sm">Home</span>
                             </div>
                         </NavLink>
@@ -77,7 +91,7 @@ const Navbar = () => {
                             }
                         >
                             <div className="flex gap-1 items-center">
-                                <FaTags size={24} />
+                                <FaTags size={18} />
                                 <span className="text-sm">Brands</span>
                             </div>
                         </NavLink>
@@ -90,11 +104,26 @@ const Navbar = () => {
                             }
                         >
                             <div className="flex gap-1 items-center">
-                                <FaUser size={24} />
+                                <FaUser size={18} />
                                 <span className="text-sm">My Profile</span>
                             </div>
                         </NavLink>
                     </li>
+
+                    <li>
+                        <NavLink
+                            to="/dailyOffers"
+                            className={({ isActive }) =>
+                                isActive ? "text-emerald-600" : "text-slate-900"
+                            }
+                        >
+                            <div className="flex gap-1 items-center">
+                                <FaDailymotion size={18} />
+                                <span className="text-sm">Daily Offers</span>
+                            </div>
+                        </NavLink>
+                    </li>
+
 
 
                 </ul>

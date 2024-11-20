@@ -4,6 +4,8 @@ import Home from "../components/Home/Home";
 import Brands from "../components/Brands/Brands";
 import BrandDetails from "../components/BrandDetails/BrandDetails";
 import BrandOnSale from "../components/BrandOnSale/BrandOnSale";
+import DailyOffers from "../components/DailyOffers/DailyOffers";
+import MyProfile from "../pages/MyProfile/MyProfile";
 
 
 export const router = createBrowserRouter([
@@ -27,5 +29,13 @@ export const router = createBrowserRouter([
     {
         path: "/brands",
         element:<Brands></Brands>
+    },
+    {
+        path: "/my-profile",
+        element: <MyProfile></MyProfile>
+    },
+    {
+        path:'/dailyOffers',
+        element: <DailyOffers></DailyOffers>
     }
   ]);

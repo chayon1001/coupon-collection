@@ -6,6 +6,7 @@ import BrandDetails from "../components/BrandDetails/BrandDetails";
 import BrandOnSale from "../components/BrandOnSale/BrandOnSale";
 import DailyOffers from "../components/DailyOffers/DailyOffers";
 import MyProfile from "../pages/MyProfile/MyProfile";
+import BlogLatest from "../components/BlogLatest/BlogLatest";
 
 
 export const router = createBrowserRouter([
@@ -21,21 +22,27 @@ export const router = createBrowserRouter([
             path:'/brand/:id',
             element:<BrandDetails></BrandDetails>
         },
+
+        {
+            path: "/brands",
+            element:<Brands></Brands>
+        },
+        {
+            path: "/my-profile",
+            element: <MyProfile></MyProfile>
+        },
+        {
+            path:'/dailyOffers',
+            element: <DailyOffers></DailyOffers>
+        },
+        {
+            path: "/blog",
+            element: <BlogLatest></BlogLatest>
+        }
         
       ]
 
       
-    },
-    {
-        path: "/brands",
-        element:<Brands></Brands>
-    },
-    {
-        path: "/my-profile",
-        element: <MyProfile></MyProfile>
-    },
-    {
-        path:'/dailyOffers',
-        element: <DailyOffers></DailyOffers>
     }
+    
   ]);

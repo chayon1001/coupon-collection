@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import TopBrands from '../TopBrands/TopBrands';
 import BrandOnSale from '../BrandOnSale/BrandOnSale';
 import DailyOffers from '../DailyOffers/DailyOffers';
+import BlogLatest from '../BlogLatest/BlogLatest';
 
 const Home = () => {
     return (
@@ -20,6 +21,9 @@ const Home = () => {
 
            <div>
                 <DailyOffers></DailyOffers>
+           </div>
+           <div>
+                <BlogLatest></BlogLatest>
            </div>
         </div>
     );

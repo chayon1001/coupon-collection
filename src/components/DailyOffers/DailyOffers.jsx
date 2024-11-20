@@ -1,11 +1,12 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
+import dailyFirst from '../../assets/daily_first.jpg'
+import dailySecond from '../../assets/daily_second.jpg'
+import dailyThird from '../../assets/daily_third.jpg'
 
 const DailyOffers = () => {
     return (
         <>
-            <Navbar></Navbar>
+           
 
 
             <div className="p-4">
@@ -22,7 +23,7 @@ const DailyOffers = () => {
 
                         <div className="border rounded-lg shadow-md p-4 bg-white">
                             <img
-                                src="https://via.placeholder.com/150"
+                                src={dailyFirst}
                                 alt="Shopping"
                                 className="w-full h-40 object-cover rounded-md"
                             />
@@ -49,7 +50,7 @@ const DailyOffers = () => {
 
                         <div className="border rounded-lg shadow-md p-4 bg-white">
                             <img
-                                src="https://via.placeholder.com/150"
+                                src={dailySecond}
                                 alt="Online Offer"
                                 className="w-full h-40 object-cover rounded-md"
                             />
@@ -74,7 +75,7 @@ const DailyOffers = () => {
 
                         <div className="border rounded-lg shadow-md p-4 bg-white">
                             <img
-                                src="https://via.placeholder.com/150"
+                                src={dailyThird}
                                 alt="Discount Offer"
                                 className="w-full h-40 object-cover rounded-md"
                             />
@@ -159,7 +160,7 @@ const DailyOffers = () => {
                 </div>
             </div>
 
-            <Footer></Footer>
+           
 
         </>
     );

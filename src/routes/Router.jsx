@@ -3,6 +3,7 @@ import MainLayOut from "../layouts/MainLayOut";
 import Home from "../components/Home/Home";
 import Brands from "../components/Brands/Brands";
 import BrandDetails from "../components/BrandDetails/BrandDetails";
+import BrandOnSale from "../components/BrandOnSale/BrandOnSale";
 
 
 export const router = createBrowserRouter([
@@ -17,7 +18,7 @@ export const router = createBrowserRouter([
         {
             path:'/brand/:id',
             element:<BrandDetails></BrandDetails>
-        }
+        },
         
       ]
 

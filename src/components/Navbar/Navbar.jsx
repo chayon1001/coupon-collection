@@ -129,19 +129,24 @@ const Navbar = () => {
                             </div>
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink
-                            to="/my-profile"
-                            className={({ isActive }) =>
-                                isActive ? "text-emerald-600" : "text-slate-900"
-                            }
-                        >
-                            <div className="flex gap-1 items-center">
+                    {
+                        user && <>
 
-                                <span className="text-sm">My Profile</span>
-                            </div>
-                        </NavLink>
-                    </li>
+                            <li>
+                                <NavLink
+                                    to="/my-profile"
+                                    className={({ isActive }) =>
+                                        isActive ? "text-emerald-600" : "text-slate-900"
+                                    }
+                                >
+                                    <div className="flex gap-1 items-center">
+
+                                        <span className="text-sm">My Profile</span>
+                                    </div>
+                                </NavLink>
+                            </li>
+                        </>
+                    }
 
                     <li>
                         <NavLink
@@ -175,7 +180,7 @@ const Navbar = () => {
 
                 </ul>
             </div>
-            <div  className='ml-4 text-emerald-800'>
+            <div className='ml-4 text-emerald-800'>
 
                 {
                     user && user?.email

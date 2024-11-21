@@ -1,8 +1,7 @@
 
 # Coupons Collecting Application [e-commerce]
 
-- ## Live link : https://assorted-balloon.surge.sh/
-
+- ## Live link : https://obsequious-grain.surge.sh/
 
 
 ### The purpose of your project depends on its specific goals and features, but here’s a general outline based on the context of your current project (involving React, Firebase Authentication, AOS animations, and e-commerce-like functionality)

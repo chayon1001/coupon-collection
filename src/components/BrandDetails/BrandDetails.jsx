@@ -2,18 +2,12 @@ import React from "react";
 import { useParams, useLoaderData, Navigate } from "react-router-dom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import toast, { Toaster } from "react-hot-toast";
-import { useContext } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
+
 
 const BrandDetails = () => {
     const { id } = useParams();
     const brands = useLoaderData();
-    // const { user } = useContext(AuthContext);
-
-    // if (!user) {
-
-    //     return <Navigate to="/auth/login" />;
-    // }
+    
 
     const brand = brands.find((brand) => brand._id === id);
 

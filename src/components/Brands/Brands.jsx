@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
+import { AuthContext } from '../../Provider/AuthProvider';
+import BrandDetails from '../BrandDetails/BrandDetails';
+// import BrandDetails from '../BrandDetails/BrandDetails';
 
 const Brands = () => {
+    const {user} = useContext(AuthContext)
 
     const navigate = useNavigate();
 
@@ -12,21 +16,20 @@ const Brands = () => {
     console.log(data)
 
     const [searchTerm, setSearchTerm] = useState("");
-    const [isLoggedIn, setIsLoggedIn] = useState(false); 
+    
 
-
-    const filteredBrands = data.filter((brand) =>
+    const filteredBrands = data?.filter((brand) =>
         brand.brand_name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     const handleViewCoupons = (brandId) => {
-        if (isLoggedIn) {
-            navigate(`/brand-details/${brandId}`);
-        } 
-        // else {
-        //     navigate("/login");
-        // }
-    };
+        if (user) {
+         
+          navigate(`/brand/${brandId}`);
+        }
+         
+      };
+    
 
     return (
         <div className="p-8 bg-gray-100 min-h-screen">

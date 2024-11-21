@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import toast from 'react-hot-toast';
@@ -7,6 +7,8 @@ import toast from 'react-hot-toast';
 const Login = () => {
     const navigate = useNavigate()
     const {loginUser, setUser} = useContext(AuthContext)
+
+    const [error, setError] = useState({})
 
     const handleSubmit = (e)=>{
         e.preventDefault();
@@ -22,12 +24,12 @@ const Login = () => {
             const user = result.user;
             setUser(user);
            navigate('/')
+           toast.success('Login successful!');
 
         })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            toast.error('Login is not okay please try again !');
+        .catch((err) => {
+            setError({ ...error, login: err.code})
+            
           });
         
     }
@@ -49,6 +51,13 @@ const Login = () => {
                     <input type="password" name='password' placeholder="password" className="input input-bordered" required />
 
                 </div>
+                {
+                    error.login &&(
+                        <label className="label text-sm text-red-600">
+                            {error.login}
+                    </label>
+                    ) 
+                }
                 <label className="label">
                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>

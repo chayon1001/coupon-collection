@@ -12,6 +12,7 @@ import Register from "../components/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import ErrorElement from "../pages/ErrorElement/ErrorElement";
 import ForgetPassword from "../pages/ForgetPassword/ForgetPassword";
+import FinalUpdate from "../pages/FInalUpdate/FinalUpdate";
 
 
 export const router = createBrowserRouter([
@@ -65,6 +66,10 @@ export const router = createBrowserRouter([
             {
                 path: '/forgetPassword',
                 element: <ForgetPassword></ForgetPassword>
+            },
+            {
+                path: '/finalUpdate',
+                element: <FinalUpdate></FinalUpdate>
             }
 
 

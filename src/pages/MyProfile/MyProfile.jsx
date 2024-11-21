@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { Link } from 'react-router-dom';
 
 const MyProfile = () => {
     const {user} = useContext(AuthContext)
@@ -18,7 +19,7 @@ const MyProfile = () => {
 
            
             <div className="flex justify-center mt-8">
-                <div className="w-full max-w-sm bg-white shadow-lg rounded-lg overflow-hidden">
+                <div className="w-full max-w-sm bg-white shadow-lg rounded-lg overflow-hidden pb-5">
                     <div className="flex flex-col items-center p-6">
                         <img
                             className="w-24 h-24 rounded-full border-4 border-emerald-500"
@@ -28,7 +29,9 @@ const MyProfile = () => {
                         </h2>
                         <p className="text-gray-600 mt-2">{user?.email}</p>
                     </div>
+                    <Link to='/finalUpdate' className='btn bg-emerald-800 text-white flex items-center w-3/5 mx-auto ' >Update</Link>
                 </div>
+               
             </div>
         </div>
     );

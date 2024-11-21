@@ -11,6 +11,7 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import ErrorElement from "../pages/ErrorElement/ErrorElement";
+import ForgetPassword from "../pages/ForgetPassword/ForgetPassword";
 
 
 export const router = createBrowserRouter([
@@ -60,7 +61,12 @@ export const router = createBrowserRouter([
             {
                 path: "/blog",
                 element: <BlogLatest></BlogLatest>
+            },
+            {
+                path: '/forgetPassword',
+                element: <ForgetPassword></ForgetPassword>
             }
+
 
         ]
 

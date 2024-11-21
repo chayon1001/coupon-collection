@@ -10,12 +10,14 @@ import BlogLatest from "../components/BlogLatest/BlogLatest";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import ErrorElement from "../pages/ErrorElement/ErrorElement";
 
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <MainLayOut></MainLayOut>,
+        errorElement: <ErrorElement></ErrorElement>,
         children: [
             {
                 path: "/",

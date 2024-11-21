@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../Firebase/firebase.config';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import  { Toaster } from 'react-hot-toast';
 
 export const AuthContext = createContext();
@@ -15,6 +15,10 @@ const AuthProvider = ({children}) => {
     const createUser =(email,password)=>{
         setLoading(true)
         return createUserWithEmailAndPassword(auth,email,password);
+    }
+
+    const updatedUserProfile = (updatedData)=>{
+        return updateProfile(auth.currentUser, updatedData);
     }
 
     const loginUser = (email, password)=>{
@@ -33,7 +37,8 @@ const AuthProvider = ({children}) => {
         createUser,
         loginUser,
         logOut,
-        loading
+        loading,
+        updatedUserProfile
     }
 
     useEffect(()=>{

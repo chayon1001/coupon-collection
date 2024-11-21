@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext)
     return (
-        <div className="navbar bg-base-100 w-11/12 mx-auto">
+        <div className="navbar bg-base-100 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -98,9 +98,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">COUPON <span className='bg-emerald-900 text-white rounded-r-full p-1 px-2'>ER.</span></a>
-            </div>
-                {user && user.email}
-            <div>
+
 
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -177,11 +175,32 @@ const Navbar = () => {
 
                 </ul>
             </div>
+            <div  className='ml-4 text-emerald-800'>
+
+                {
+                    user && user?.email
+
+                }
+            </div>
+
             <div className="navbar-end">
+
+                <div className='mr-3'>
+
+                    {user && user?.email ? <div className='flex items-center gap-2 '>
+                        <img className='w-6' src={user?.photoURL} alt="" />
+                        <p className=''>Hi, <span className='font-semibold text-lg '>
+                            {user.displayName}</span></p>
+                    </div> : " "
+
+
+                    }
+
+                </div>
                 {
                     user && user?.email ? <button onClick={logOut} className="px-4 py-2 bf bg-emerald-900 rounded-lg text-white">Log-Out</button> : <Link to='/auth/login' className="px-4 py-2 bf bg-emerald-900 rounded-lg text-white" >Login
-                </Link>
-              }
+                    </Link>
+                }
             </div>
         </div>
     );

@@ -18,7 +18,7 @@ const Brands = () => {
     const [searchTerm, setSearchTerm] = useState("");
     
 
-    const filteredBrands = data?.filter((brand) =>
+    const filteredBrands = data.filter((brand) =>
         brand.brand_name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 

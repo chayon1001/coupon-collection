@@ -2,11 +2,14 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AuthProvider, { AuthContext } from '../../Provider/AuthProvider';
 import toast from 'react-hot-toast';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
     const navigate = useNavigate();
-    const { createUser, setUser,  updatedUserProfile } = useContext(AuthContext);
-    const [passwordError, setPasswordError] = useState(""); // 
+    const { createUser, setUser, updatedUserProfile } = useContext(AuthContext);
+    const [passwordError, setPasswordError] = useState("");
+
+    const [showPassword, setShowPassword] = useState(false)
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -17,7 +20,7 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('password');
 
-      
+
         if (!/[A-Z]/.test(password)) {
             setPasswordError("Password must contain at least one uppercase letter.");
             return;
@@ -31,7 +34,7 @@ const Register = () => {
             return;
         }
 
-      
+
         setPasswordError("");
 
         createUser(email, password)
@@ -39,13 +42,13 @@ const Register = () => {
                 const user = result.user;
                 setUser(user);
                 console.log(user);
-               
-                updatedUserProfile({displayName: name, photoURL:photo})
-                .then(() => {
-                    navigate('/');
-                  }).catch((error) => {
-                    console.log(error)
-                  });
+
+                updatedUserProfile({ displayName: name, photoURL: photo })
+                    .then(() => {
+                        navigate('/');
+                    }).catch((error) => {
+                        console.log(error)
+                    });
             })
             .catch((error) => {
                 toast.error('Registration failed. Please try again!');
@@ -90,19 +93,28 @@ const Register = () => {
                         className="input input-bordered"
                         required />
                 </div>
-                <div className="form-control">
+                <div className="form-control relative">
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
                     <input
-                        type="password"
+                        type={showPassword ? "text" :
+                            "password"
+                        }
                         name='password'
                         placeholder="password"
                         className="input input-bordered"
                         required />
-                    {/* Display password error */}
+
                     {passwordError && <p className="text-red-500 text-sm mt-1">{passwordError}</p>}
+
+                    <button onClick={() => setShowPassword(!showPassword)} className='btn btn-xs absolute right-6 top-12'>
+                        {
+                            showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                        }
+                    </button>
                 </div>
+
                 <div className="form-control mt-6">
                     <button className="btn bg-emerald-900 text-white text-xl">Register</button>
                 </div>

@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 
 const Login = () => {
     const navigate = useNavigate()
-    const {loginUser, setUser} = useContext(AuthContext)
+    const {loginUser, setUser, logInWithGoogle} = useContext(AuthContext)
 
     const [error, setError] = useState({})
 
@@ -25,6 +25,7 @@ const Login = () => {
             setUser(user);
            navigate('/')
            toast.success('Login successful!');
+           e.target.reset()
 
         })
         .catch((err) => {
@@ -33,8 +34,19 @@ const Login = () => {
           });
         
     }
+
+    const handleGoogleLogin = ()=>{
+        logInWithGoogle()
+        .then((res)=>{
+            setUser(res)
+            navigate('/')
+        })
+        .catch(error=>{
+            console.log("ERROR", error.message)
+        })
+    }
     return (
-        <div className=" mt-5 rounded-lg bg-base-100 w-full max-w-lg mx-auto shrink-0 shadow-2xl">
+        <div className=" mt-5 rounded-lg bg-base-100 w-full max-w-lg mx-auto shrink-0 shadow-2xl pb-8">
 
             <h2 className='text-2xl font-semibold text-center pt-4'>Login your account</h2>
             <form onSubmit={handleSubmit} className="card-body">
@@ -66,6 +78,8 @@ const Login = () => {
                 </div>
             </form>
             <p className='text-lg text-center pb-8'>Don't have an account ? <Link className='text-red-500' to='/auth/register'>Register</Link></p>
+
+            <p onClick={handleGoogleLogin} className='btn bg-gray-400 w-3/5 mx-auto flex items-center'>Login with Google</p>
         </div>
     );
 };

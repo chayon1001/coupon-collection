@@ -180,7 +180,7 @@ const Navbar = () => {
 
                 </ul>
             </div>
-            <div className='ml-4 text-emerald-800'>
+            <div className='ml-4 text-emerald-800 hidden lg:flex'>
 
                 {
                     user && user?.email

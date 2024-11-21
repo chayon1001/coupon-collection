@@ -9,52 +9,58 @@ import MyProfile from "../pages/MyProfile/MyProfile";
 import BlogLatest from "../components/BlogLatest/BlogLatest";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
     {
-      path: "/",
-      element: <MainLayOut></MainLayOut>,
-      children:[
-        {
-            path:"/",
-            element: <Home></Home>,
-            loader: ()=> fetch('./fake_data.json')
-        },
-        {
-            path:"/auth/login",
-            element: <Login></Login>
-        },
-        {
-            path: "/auth/register",
-            element: <Register></Register>
-        },
-        {
-            path:'/brand/:id',
-            element:<BrandDetails></BrandDetails>
-        },
+        path: "/",
+        element: <MainLayOut></MainLayOut>,
+        children: [
+            {
+                path: "/",
+                element: <Home></Home>,
+                loader: () => fetch('./fake_data.json')
+            },
+            {
+                path: "/auth/login",
+                element: <Login></Login>
+            },
+            {
+                path: "/auth/register",
+                element: <Register></Register>
+            },
+            {
+                path: "/brand/:id",
+                element: (<PrivateRoute>
+                             <BrandDetails></BrandDetails>
+                </PrivateRoute>),
+                loader: async () => {
+                    const response = await fetch("./fake_data.json");
+                    return response.json();
+                },
+            },
+            {
+                path: "/brands",
+                element: <Brands></Brands>,
+                loader: () => fetch('./fake_data.json')
+            },
+            {
+                path: "/my-profile",
+                element: <MyProfile></MyProfile>
+            },
+            {
+                path: '/dailyOffers',
+                element: <DailyOffers></DailyOffers>
+            },
+            {
+                path: "/blog",
+                element: <BlogLatest></BlogLatest>
+            }
 
-        {
-            path: "/brands",
-            element:<Brands></Brands>,
-            loader: ()=> fetch('./fake_data.json')
-        },
-        {
-            path: "/my-profile",
-            element: <MyProfile></MyProfile>
-        },
-        {
-            path:'/dailyOffers',
-            element: <DailyOffers></DailyOffers>
-        },
-        {
-            path: "/blog",
-            element: <BlogLatest></BlogLatest>
-        }
-        
-      ]
+        ]
 
-      
+
     }
-    
-  ]);
+
+]);

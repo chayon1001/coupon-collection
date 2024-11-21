@@ -10,7 +10,7 @@ import fourthImage from '../../assets/fourth.jpg'
 
 const Banner = () => {
     return (
-        <div className="carousel w-full h-[400px] ">
+        <div className="carousel  h-[400px] max-w-screen-2xl">
             <div id="slide1" className="carousel-item relative w-full">
                 <img
                     src={firstImage}
@@ -20,7 +20,7 @@ const Banner = () => {
                     <a href="#slide2" className="btn btn-circle">❯</a>
                 </div>
 
-                <div className='absolute px-14 md:px-28 lg:px-0 lg:left-96 top-32'>
+                <div className='absolute px-14 md:px-28 lg:px-0 lg:left-[450px] top-32'>
                     <h3 className='text-center text-slate-700 font-semibold text-2xl'>Only the best discounts & coupons</h3>
                     <p className='text-center my-3 text-slate-700'>Over 17 working discount & coupon codes is active for 3 users, enjoy!</p>
 

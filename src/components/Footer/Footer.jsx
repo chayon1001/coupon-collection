@@ -1,5 +1,6 @@
 import React from "react";
 import { FaTwitter, FaFacebookF, FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -33,7 +34,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* About Us Section */}
                 <div>
                     <h3 className="text-white font-bold text-lg mb-4">About Us</h3>
                     <ul className="space-y-2">
@@ -46,7 +46,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-              
+
                 <div>
                     <h3 className="text-white font-bold text-lg mb-4">Follow Us</h3>
                     <div className="flex space-x-4">
@@ -69,6 +69,16 @@ const Footer = () => {
                             <FaGoogle size={24} />
                         </a>
                     </div>
+
+                    <Link to='/my-profile'>
+                        <div className="pt-16">
+                            <a
+                                href="#"
+                                className="block mt-4 text-teal-500 font-bold text-3xl hover:underline" >
+                                Profile &rarr;
+                            </a>
+                        </div>
+                    </Link>
                 </div>
             </div>
 

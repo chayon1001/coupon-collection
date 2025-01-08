@@ -59,3 +59,7 @@ ___
     - Purpose: Provides a collection of icons for use in your components (e.g., social media or navigation icons).
 
 These packages cover most of the functionality required for your project and are well-documented for easy implementation.
+
+## Technologies Used
+Frontend: React.js, Next.js, Ant Design, Redux Toolkit, React Redux, React Hook Form, React Quill, React Image Magnify, Recharts, React Hot Toast, React Icons, React Responsive Carousel, Axios, CSS, Tailwind CSS
+Deployment: Surge

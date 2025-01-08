@@ -63,3 +63,10 @@ These packages cover most of the functionality required for your project and are
 ## Technologies Used
 Frontend: React.js, Next.js, Ant Design, Redux Toolkit, React Redux, React Hook Form, React Quill, React Image Magnify, Recharts, React Hot Toast, React Icons, React Responsive Carousel, Axios, CSS, Tailwind CSS
 Deployment: Surge
+
+## Getting Started
+
+ 1. Install the dependencies: npm install
+ 2. Set up the environment variables.
+ 3. Start the development server: npm run dev
+

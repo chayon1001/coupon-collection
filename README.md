@@ -68,5 +68,10 @@ Deployment: Surge
 
  1. Install the dependencies: npm install
  2. Set up the environment variables.
- 3. Start the development server: npm run dev
+ 3. Start the development server: npm run dev.
+
+## Contact
+For any questions or inquiries, please contact us at
+
+Email: harishankarbarman50@gmail.com.
 
